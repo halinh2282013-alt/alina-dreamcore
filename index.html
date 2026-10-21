@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алина. — Somewhere Between Dreams and Reality</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HIỆU ỨNG BỤI SÁNG & MÂY TRÔI NỀN -->
+    <div class="dream-dust-container" id="dustContainer"></div>
+    <div class="cloud-bg cloud-1"></div>
+    <div class="cloud-bg cloud-2"></div>
+
+    <!-- INTRO SCREEN -->
+    <section id="introScreen" class="intro-screen">
+        <div class="intro-overlay"></div>
+        <div class="intro-content">
+            <h1 class="brand-title">Алина.</h1>
+            <p class="intro-slogan">Somewhere Between Dreams and Reality</p>
+            <p class="intro-question">Are you ready to dream?</p>
+            <button id="enterBtn" class="dream-btn">Bước Vào Giấc Mơ</button>
+        </div>
+        <div class="surreal-object object-clock">⏳</div>
+        <div class="surreal-object object-star">⭐</div>
+    </section>
+
+    <!-- MAIN APP INTERFACE -->
+    <main id="mainApp" class="main-app hidden">
+        <!-- HEADER / NAVIGATION -->
+        <header class="app-header">
+            <div class="header-inner">
+                <div class="logo-area" onclick="goHome()">
+                    <h2>Алина.</h2>
+                    <span>Dreams & Reality</span>
+                </div>
+                <div class="search-random-bar">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm ký ức hoặc nhân vật...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <button id="randomBtn" class="random-btn" title="Chọn ngẫu nhiên một nhân vật">
+                        ✨ Random Character
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO BANNER / GREETING -->
+        <section class="dream-banner">
+            <div class="banner-content">
+                <h2>Vùng Đất Của Những Giấc Mơ Tiềm Thức</h2>
+                <p>Nơi các ký ức hóa thành hình khối, và những tâm hồn cô đơn tìm thấy tri âm qua từng khung cửa sổ lơ lửng.</p>
+            </div>
+        </section>
+
+        <!-- CHARACTER LIST SECTION -->
+        <section class="characters-section">
+            <div class="section-title">
+                <h3>Những Lối Rẽ Trong Mộng</h3>
+                <span class="subtitle-desc">Chọn một cánh cửa và bắt đầu trò chuyện</span>
+            </div>
+            
+            <div id="characterGrid" class="character-grid">
+                <!-- Dữ liệu nhân vật sẽ được render tự động qua script.js -->
+            </div>
+            <div id="noResult" class="no-result hidden">Không tìm thấy mảnh vỡ ký ức nào phù hợp... ☁️</div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <p>Алина. © 2026 — Somewhere Between Dreams and Reality</p>
+        </footer>
+    </main>
+
+    <!-- CHARACTER DETAIL MODAL -->
+    <div id="characterModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button id="closeModal" class="close-btn">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Nội dung chi tiết nhân vật -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
